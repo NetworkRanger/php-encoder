@@ -1,0 +1,25 @@
+{
+    "name": "iphpjs/php-encoder",
+    "description": "The Iphpjs Encoding package.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NetworkRanger",
+            "email": "admin@iphpjs.com"
+        }
+    ],
+    "require": {
+        "iphpjs/php-contracts": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iphpjs\\Encoder\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Iphpjs\\Encoder\\Tests\\": "tests/"
+        }
+    }
+}

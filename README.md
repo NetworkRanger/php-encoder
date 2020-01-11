@@ -1,2 +1,2 @@
 # php-encoder
-The Iphpjs Hashing package.
+The Iphpjs Encoding package.

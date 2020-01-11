@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "552357b836323652f2d12d07d2e01074",
+    "packages": [
+        {
+            "name": "iphpjs/php-contracts",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/iphpjs/php-contracts.git",
+                "reference": "c2ae1e35b298e95d9427d29bd4269f82549c7c1e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/iphpjs/php-contracts/zipball/c2ae1e35b298e95d9427d29bd4269f82549c7c1e",
+                "reference": "c2ae1e35b298e95d9427d29bd4269f82549c7c1e",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Iphpjs\\Contracts\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "NetworkRanger",
+                    "email": "admin@iphpjs.com"
+                }
+            ],
+            "description": "The Iphpjs Contracts package.",
+            "time": "2020-01-11T15:13:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "iphpjs/php-contracts": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
