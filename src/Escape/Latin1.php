@@ -29,10 +29,8 @@ class Latin1 implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        \preg_match_all('/./', $value, $matches);
-
         $str = '';
-        foreach ($matches[0] as $m) {
+        foreach (str_split($value) as $m) {
             $str .= '\x' . \bin2hex($m);
         }
         return $str;

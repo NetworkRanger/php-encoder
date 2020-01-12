@@ -9,16 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Iphpjs\Encoder;
-
 use Iphpjs\Contracts\Encoding\Encoder as EncoderContract;
 
-/**
- * @see https://tools.ietf.org/html/rfc3986
- * Class RawUrl Url RFC 3986
- * @package Iphpjs\Encoder
- */
-class RawUrl implements EncoderContract
+class Uuencode implements EncoderContract
 {
 
     /**
@@ -30,7 +23,7 @@ class RawUrl implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        return \rawurldecode($value);
+        return \convert_uuencode($value);
     }
 
     /**
@@ -42,6 +35,6 @@ class RawUrl implements EncoderContract
      */
     public function decode(string $encodedValue, array $options = []): string
     {
-        return \rawurldecode($encodedValue);
+        return \convert_uudecode($encodedValue);
     }
 }

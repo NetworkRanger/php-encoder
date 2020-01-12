@@ -25,10 +25,8 @@ class Unicode implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        \preg_match_all('/./u', $value, $matches);
-
         $str = '';
-        foreach ($matches[0] as $m) {
+        foreach (preg_split('//u', $value, -1, PREG_SPLIT_NO_EMPTY) as $m) {
             $str .= '\u' . \substr(\bin2hex(\iconv('UTF-8', 'UCS-4', $m)), 4);
         }
         return $str;

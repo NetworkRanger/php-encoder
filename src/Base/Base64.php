@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Iphpjs\Encoder;
+namespace Iphpjs\Encoder\Base;
 
 use Iphpjs\Contracts\Encoding\Encoder as EncoderContract;
 
 /**
- * @see https://tools.ietf.org/html/rfc3986
- * Class RawUrl Url RFC 3986
- * @package Iphpjs\Encoder
+ * @see https://tools.ietf.org/html/rfc4648
+ * Class Base64 RFC 4648
+ * @package Iphpjs\Encoder\Base
  */
-class RawUrl implements EncoderContract
+class Base64 implements EncoderContract
 {
 
     /**
@@ -30,7 +30,7 @@ class RawUrl implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        return \rawurldecode($value);
+        return \base64_decode($value);
     }
 
     /**
@@ -42,6 +42,6 @@ class RawUrl implements EncoderContract
      */
     public function decode(string $encodedValue, array $options = []): string
     {
-        return \rawurldecode($encodedValue);
+        return \base64_decode($encodedValue);
     }
 }

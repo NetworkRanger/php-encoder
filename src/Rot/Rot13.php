@@ -9,11 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Iphpjs\Encoder;
-
 use Iphpjs\Contracts\Encoding\Encoder as EncoderContract;
 
-class Base64 implements EncoderContract
+class Rot13 implements EncoderContract
 {
 
     /**
@@ -25,7 +23,7 @@ class Base64 implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        return \base64_decode($value);
+        return \str_rot13($value);
     }
 
     /**
@@ -37,6 +35,6 @@ class Base64 implements EncoderContract
      */
     public function decode(string $encodedValue, array $options = []): string
     {
-        return \base64_decode($encodedValue);
+        return \str_rot13($encodedValue);
     }
 }

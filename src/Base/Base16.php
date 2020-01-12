@@ -9,17 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace Iphpjs\Encoder;
+namespace Iphpjs\Encoder\Base;
 
 use Iphpjs\Contracts\Encoding\Encoder as EncoderContract;
 
 /**
- * @see https://tools.ietf.org/html/rfc3986
- * Class RawUrl Url RFC 3986
- * @package Iphpjs\Encoder
+ * @see https://tools.ietf.org/html/rfc4648
+ * Class Base16 RFC 4648
+ * @package Iphpjs\Encoder\Base
  */
-class RawUrl implements EncoderContract
+class Base16 implements EncoderContract
 {
+    const CHAR_SET = '0123456789ABCDEF';
 
     /**
      * Encode the given value.
@@ -30,7 +31,7 @@ class RawUrl implements EncoderContract
      */
     public function encode(string $value, array $options = []): string
     {
-        return \rawurldecode($value);
+        return \strtoupper(\bin2hex($value));
     }
 
     /**
@@ -42,6 +43,6 @@ class RawUrl implements EncoderContract
      */
     public function decode(string $encodedValue, array $options = []): string
     {
-        return \rawurldecode($encodedValue);
+        return \hex2bin($encodedValue);
     }
 }
